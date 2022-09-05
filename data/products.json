@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Bàn phím Leopold FC660MPD Light Pink",
+    "brand": "Leopold",
+    "warranty": "24 tháng",
+    "image": "leopoldfc660.jpg",
+    "price": 2750000
+  },
+  {
+    "id": 2,
+    "name": "Bàn phím cơ Leopold FC980M PD Dark Yellow",
+    "brand": "Leopold",
+    "warranty": "24 tháng",
+    "image": "leopoldfc980.png",
+    "price": 2990000
+  },
+  {
+    "id": 3,
+    "name": "Bàn phím Leopold FC660MPD Sweden White Case",
+    "brand": "Leopold",
+    "warranty": "24 tháng",
+    "image": "leopoldfc660mpdswedenwhite.jpg",
+    "price": 3590000
+  },
+  {
+    "id": 4,
+    "name": "Bàn phím Corsair K68 RGB",
+    "brand": "Corsair",
+    "warranty": "24 tháng",
+    "image": "corsairk68.png",
+    "price": 2990000
+  },
+  {
+    "id": 5,
+    "name": "Bàn phím Corsair K63 Wireless",
+    "brand": "Corsair",
+    "warranty": "24 tháng",
+    "image": "corsairk63.png",
+    "price": 3390000
+  },
+  {
+    "id": 6,
+    "name": "Bàn phím Corsair K70 RGB MK.2",
+    "brand": "Corsair",
+    "warranty": "24 tháng",
+    "image": "corsairk70.png",
+    "price": 4050000
+  },
+  {
+    "id": 7,
+    "name": "Chuột Steelseries Rival 3",
+    "brand": "Steelseries",
+    "warranty": "12 tháng",
+    "image": "steelseriesrival3.jpg",
+    "price": 940000
+  },
+  {
+    "id": 8,
+    "name": "Chuột Steelseries Rival 600",
+    "brand": "Steelseries",
+    "warranty": "12 tháng",
+    "image": "steelseriesrival600.png",
+    "price": 1990000
+  },
+  {
+    "id": 9,
+    "name": "Chuột SteelSeries Sensei Ten",
+    "brand": "Steelseries",
+    "warranty": "12 tháng",
+    "image": "ssten.png",
+    "price": 1550000
+  },
+  {
+    "id": 10,
+    "name": "Chuột Logitech G102 Lightsync RGB Black",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logitechg102.jpg",
+    "price": 599000
+  },
+  {
+    "id": 11,
+    "name": "Chuột Logitech G402 Hyperion",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logitechg402.png",
+    "price": 999000
+  },
+  {
+    "id": 12,
+    "name": "Chuột Logitech G304 Lightspeed Wireless",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logg304.png",
+    "price": 405000
+  },
+  {
+    "id": 13,
+    "name": "Tai nghe HyperX Cloud Earbuds",
+    "brand": "HyperX",
+    "warranty": "12 tháng",
+    "image": "hyperx_cloud_earbuds.png",
+    "price": 890000
+  },
+  {
+    "id": 14,
+    "name": "Tai nghe HyperX Cloud Earbuds Yellow",
+    "brand": "HyperX",
+    "warranty": "12 tháng",
+    "image": "hyperx_cloud_earbuds_yellow_edition.jpg",
+    "price": 890000
+  },
+  {
+    "id": 15,
+    "name": "Tai nghe không dây HyperX Cloud Buds",
+    "brand": "HyperX",
+    "warranty": "12 tháng",
+    "image": "kingston_hyperx_cloud_buds.jpg",
+    "price": 1490000
+  },
+  {
+    "id": 16,
+    "name": "Tai nghe Logitech G Pro X League Of Legends",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logitech_pro_x_phien_ban_league_of_legends.jpg",
+    "price": 3690000
+  },
+  {
+    "id": 17,
+    "name": "Tai nghe Logitech G733 LIGHTSPEED Wireless White",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logitech-g733-lightspeed-wireless-white.png",
+    "price": 2990000
+  },
+  {
+    "id": 18,
+    "name": "Tai nghe Logitech G733 KDA Lightspeed Wireless",
+    "brand": "Logitech",
+    "warranty": "12 tháng",
+    "image": "logitechkda.png",
+    "price": 3499000
+  }
+]

@@ -1,0 +1,92 @@
+<style>
+  .carousel-item img {
+    width: 100%;
+    height: 650px;
+  }
+</style>
+<!-- hiển thị slide hình ảnh -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/slideshow_1.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/slideshow_2.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/slideshow_3.jpg">
+    </div>
+  </div>
+</div>
+<!-- hiển thị sản phẩm theo từng loại -->
+<div ng-controller="productCtrl">
+  <div class="container">
+
+    <div class="row mt-5" style="background-color: red; color: white; font-weight: bold; ">
+      <div class="col-lg-6 text-left">
+        BÀN PHÍM - MIỄN PHÍ GIAO HÀNG TOÀN QUỐC
+      </div>
+      <div class="col-lg-6 text-right">
+        <a href="#!products" style="text-decoration: none; color: white;">Xem tất cả<i
+            class="fas fa-chevron-right ml-2"></i></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" ng-repeat="product in products | filter :{name :'Bàn phím'}">
+        <img class=" card-img-top" src="./images/{{product.image}}" alt="Product image">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price | number}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5" style="background-color: red; color: white; font-weight: bold; ">
+      <div class="col-lg-6 text-left">
+        CHUỘT - MIỄN PHÍ GIAO HÀNG TOÀN QUỐC
+      </div>
+      <div class="col-lg-6 text-right">
+        <a href="#!products" style="text-decoration: none; color: white;">Xem tất cả<i
+            class="fas fa-chevron-right ml-2"></i></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" ng-repeat="product in products | filter :{name:'Chuột'}">
+        <img class=" card-img-top" src="./images/{{product.image}}" alt="Product image">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price | number}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5" style="background-color: red; color: white; font-weight: bold; ">
+      <div class="col-lg-6 text-left">
+        TAI NGHE - MIỄN PHÍ GIAO HÀNG TOÀN QUỐC
+      </div>
+      <div class="col-lg-6 text-right">
+        <a href="#!products" style="text-decoration: none; color: white;">Xem tất cả<i
+            class="fas fa-chevron-right ml-2"></i></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" ng-repeat="product in products | filter :{name:'Tai nghe'}">
+        <img class=" card-img-top" src="./images/{{product.image}}" alt="Product image">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price | number}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

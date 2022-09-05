@@ -1,0 +1,102 @@
+<div class="container my-4" ng-controller="productCtrl">
+  <div class="row">
+    <div class="col-lg-3">
+      <img src="/images/logofooter.png" class="w-100">
+      <div class="card">
+        <h5 class="card-header bg-danger text-center text-white">Bộ lọc sản phẩm</h5>
+        <div class="card-body">
+          <form>
+            <!-- Tìm kiếm theo tên sản phẩm -->
+            <div class="form-group mb-4">
+              <label for="search">Tìm kiếm theo tên: </label>
+              <input type="search" class="form-control" ng-model="productname">
+            </div>
+            <!-- Sắp xếp theo giá -->
+            <div class="form-group mb-4">
+              <label for="price">Sắp xếp theo giá: </label>
+              <select class="form-control bg-white" ng-model="price">
+                <option value="">Mặc định</option>
+                <option value="price">Tăng dần</option>
+                <option value="-price">Giảm dần</option>
+
+              </select>
+            </div>
+            <!-- Lọc theo hãng sản xuất -->
+            <div class="form-group mb-4">
+              <label for="brand">Hãng sản xuất: </label>
+              <select class="form-control bg-white" ng-model="brandname">
+                <option value="">Mặc định</option>
+                <option value="Logitech">Logitech</option>
+                <option value="Leopold">Leopold</option>
+                <option value="Corsair">Corsair</option>
+                <option value="Steelseries">Steelseries</option>
+                <option value="HyperX">HyperX</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-lg-4 mb-2"
+          ng-repeat="product in products | filter: {name:productname,brand:brandname} | orderBy : price | limitTo:pagesize:begin"
+          ng-init="product.quantity = 1">
+          <img class="card-img-top" src="/images/{{product.image}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text text-center">{{product.price | number}}</p>
+            <a class="btn btn-danger text-white" style="margin-left: 35px;" data-toggle="modal"
+              data-target="#productInfo_{{product.id}}">Chi tiết
+              sản phẩm</a>
+          </div>
+          <!-- Modal hiển thị chi tiết sản phẩm -->
+          <div class="modal fade" id="productInfo_{{product.id}}" tabindex="-1" role="dialog"
+            aria-labelledby="productInfoLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-danger">
+                  <h5 class="modal-title text-white">Thông tin chi tiết</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="images/{{product.image}}" class="img-fluid" alt="product image">
+                    </div>
+                    <div class="col-6">
+                      <h5>{{product.name}}</h5>
+                      <p class="my-4">Hãng sản xuất : {{product.brand}}</p>
+                      <p class="my-4">Bảo hành : {{product.warranty}}</p>
+                      <p class="my-4">
+                        Số lượng: <input class="text-center" min=1 value=1 type="number" ng-model="product.quantity"
+                          style="width:50px;">
+                      </p>
+                      <hr>
+                      <p>Thành tiền: {{(product.price*product.quantity | number)}} VNĐ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                  <button type="button" class="btn btn-danger" ng-click="addcart(product)">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phân trang -->
+        <div class="col-12 text-center py-5">
+          <a class="btn btn-danger" ng-click="first()">&lt;&lt; Trang đầu</a>
+          <a class="btn btn-danger" ng-click="previous()">&lt; Trước</a>
+          <a class="btn btn-danger" ng-click="next()">Sau &gt;</a>
+          <a class="btn btn-danger" ng-click="last()">Trang Cuối &gt;&gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="mx-5" ng-controller="productCtrl">
+  <!-- Giỏ hàng -->
+  <h2 class="my-5 text-center" style="color: red;">Giỏ hàng của bạn</h2>
+
+  <table class="table text-center">
+    <thead class="bg-danger text-white">
+      <tr>
+        <th>Sản phẩm</th>
+        <th>Hãng sản xuất</th>
+        <th>Bảo hành</th>
+        <th>Hình ảnh</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cart in carts" ng-init="totalPrice()">
+        <td class="py-5">
+          <h5>{{cart.name}}</h5>
+        </td>
+        <td class="py-5">
+          <h5>{{cart.brand}}</h5>
+        </td>
+        <td class="py-5">
+          <h5>{{cart.warranty}}</h5>
+        </td>
+        <td><img class="card-img-top" style="width: 100px;" src="../images/{{cart.image}}"></td>
+        <td class="py-5">
+          <a href="#!/cart/{{cart.id}}" class="btn btn-danger" ng-click="decreaseQty()">-</a>
+          <span class="mx-2">{{cart.quantity}}</span>
+          <a href="#!/cart/{{cart.id}}" class="btn btn-danger" ng-click="increaseQty()">+</a>
+        </td>
+        <td class="py-5">
+          <h5>{{cart.price*cart.quantity | number}} VNĐ</h5>
+        </td>
+        <td class="py-5">
+          <a class="btn btn-danger" ng-click="remove_cart(cart)">Xoá</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="#!/cart" type="button" class="btn btn-danger">Cập nhật tổng tiền</a></td>
+        <td>
+          <h5 class="py-2">Tổng tiền : {{total | number}} VNĐ</h5>
+        </td>
+        <td>
+          <a href="#!/cart" type="button" class="btn btn-danger" ng-click="order()">Thanh toán</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
